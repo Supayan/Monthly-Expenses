@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="monthly_expensesDataSet" targetNamespace="http://tempuri.org/monthly_expensesDataSet.xsd" xmlns:mstns="http://tempuri.org/monthly_expensesDataSet.xsd" xmlns="http://tempuri.org/monthly_expensesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="monthly_expensesConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="monthly_expensesConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Monthly_Expense.Properties.Settings.GlobalReference.Default.monthly_expensesConnectionString2" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="exp_detailsTableAdapter" GeneratorDataComponentClassName="exp_detailsTableAdapter" Name="exp_details" UserDataComponentName="exp_detailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="monthly_expensesConnectionString2 (Settings)" DbObjectName="monthly_expenses.exp_details" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Unique_ID`, `Date`, `TOT`, `Currency`, `MOP`, `Remarks`, `Amount` FROM `exp_details`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="exp_mastTableAdapter" GeneratorDataComponentClassName="exp_mastTableAdapter" Name="exp_mast" UserDataComponentName="exp_mastTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="monthly_expensesConnectionString2 (Settings)" DbObjectName="monthly_expenses.exp_mast" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Unique_ID`, `First_Name`, `Last_Name`, `Address`, `Cont_No`, `Alt_Cont`, `Gender` FROM `exp_mast`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="monthly_expensesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="monthly_expensesDataSet" msprop:Generator_UserDSName="monthly_expensesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="exp_details" msprop:Generator_TableClassName="exp_detailsDataTable" msprop:Generator_TableVarName="tableexp_details" msprop:Generator_TablePropName="exp_details" msprop:Generator_RowDeletingName="exp_detailsRowDeleting" msprop:Generator_RowChangingName="exp_detailsRowChanging" msprop:Generator_RowEvHandlerName="exp_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="exp_detailsRowDeleted" msprop:Generator_UserTableName="exp_details" msprop:Generator_RowChangedName="exp_detailsRowChanged" msprop:Generator_RowEvArgName="exp_detailsRowChangeEvent" msprop:Generator_RowClassName="exp_detailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="exp_mast" msprop:Generator_TableClassName="exp_mastDataTable" msprop:Generator_TableVarName="tableexp_mast" msprop:Generator_TablePropName="exp_mast" msprop:Generator_RowDeletingName="exp_mastRowDeleting" msprop:Generator_RowChangingName="exp_mastRowChanging" msprop:Generator_RowEvHandlerName="exp_mastRowChangeEventHandler" msprop:Generator_RowDeletedName="exp_mastRowDeleted" msprop:Generator_UserTableName="exp_mast" msprop:Generator_RowChangedName="exp_mastRowChanged" msprop:Generator_RowEvArgName="exp_mastRowChangeEvent" msprop:Generator_RowClassName="exp_mastRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
